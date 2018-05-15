@@ -7,6 +7,6 @@ function [Y] = ss_dtmf(number, dt, nd, np)
         x = ss_dtmf1(digit, digit_dur, Ts);
         Y = [Y; x];
     end
-    % play_sound(Y, (nd + np) * dt);
+    % play_sound(Y, Fs, (nd + np) * dt);
 end
 

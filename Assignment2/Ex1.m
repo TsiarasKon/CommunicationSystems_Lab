@@ -5,4 +5,4 @@ while key < 0 || key > 11
 end
 Fs = 8000;
 x = ss_dtmf1(key, 0.2, 1/Fs);
-sound(x);
+sound(x, Fs);

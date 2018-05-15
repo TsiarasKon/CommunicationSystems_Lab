@@ -22,6 +22,6 @@ function [x] = ss_dtmf1(key, t, Ts)
     end
     time = 0:Ts:t;
     x = sin(2*pi*f1*time) + sin(2*pi*f2*time);
-    %sound(x);
+    % sound(x, 1/Ts);
 end
 
