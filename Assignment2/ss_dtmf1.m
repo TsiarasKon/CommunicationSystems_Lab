@@ -5,8 +5,8 @@ function [x] = ss_dtmf1(key, t, Ts)
         disp('Invalid key.');
         return
     elseif key == 12
-        pause(t)
-        return
+        f1 = 0;
+        f2 = 0;
     elseif key == 11
         f1 = f1_all(4);
         f2 = f2_all(3);
@@ -24,4 +24,3 @@ function [x] = ss_dtmf1(key, t, Ts)
     x = sin(2*pi*f1*time) + sin(2*pi*f2*time);
     % sound(x, 1/Ts);
 end
-
